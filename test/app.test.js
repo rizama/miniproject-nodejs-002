@@ -19,7 +19,7 @@ describe('GET /', () => {
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, {
-        message: 'Simple API Starter'
+        message: 'Technical Test - Back End Developer (NodeJS) PT Fatiha sakti (Gadjian.com)'
       }, done);
   });
 });
