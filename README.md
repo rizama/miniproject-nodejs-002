@@ -1,24 +1,4 @@
-# Simple API Starter
-
-Includes API Server utilities:
-
-* [morgan](https://www.npmjs.com/package/morgan)
-  * HTTP request logger middleware for node.js
-* [helmet](https://www.npmjs.com/package/helmet)
-  * Helmet helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!
-* [dotenv](https://www.npmjs.com/package/dotenv)
-  * Dotenv is a zero-dependency module that loads environment variables from a `.env` file into `process.env`
-
-Development utilities:
-
-* [nodemon](https://www.npmjs.com/package/nodemon)
-  * nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
-* [eslint](https://www.npmjs.com/package/eslint)
-  * ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
-* [mocha](https://www.npmjs.com/package/mocha)
-  * ☕️ Simple, flexible, fun JavaScript test framework for Node.js & The Browser ☕️
-* [supertest](https://www.npmjs.com/package/supertest)
-  * HTTP assertions made easy via superagent.
+# Mini Project Nodejs 002
 
 ## Setup
 
@@ -44,7 +24,135 @@ npm run test
 npm run dev
 ```
 
-## Note
-If you have a suggestion or a helper function that you use frequently, feel free to add and perform a pull request. thanks.
+## 1). List - Show All Employees
 
-CORE: [w3cj](https://github.com/w3cj)
+```
+[ENDPOINT](GET) /api/employees
+```
+
+```url
+[EXAMPLE] https://localhost:5000/api/employees
+```
+
+## 2). Detail - Show One Employee
+
+```
+[ENDPOINT](GET) /api/employees/{id}
+```
+
+```url
+[EXAMPLE] https://localhost:5000/api/employees/1
+```
+
+### URI params
+
+| params |    desc     | required |
+| ------ | :---------: | :------: |
+| {id}   | Employee ID |  `yes`   |
+
+## 3). Insert - Insert Data Employee
+
+```
+[ENDPOINT](POST) /api/employees/
+```
+
+```url
+[EXAMPLE] https://localhost:5000/api/employees/
+```
+
+```json
+{
+	"name": "Santana",
+	"phone_number": "085659123456",
+	"job_title": "Frontend"
+}
+```
+
+## 4). Update - Update Data Employee
+
+```
+[ENDPOINT](PUT) /api/employees/1
+```
+
+```url
+[EXAMPLE] https://localhost:5000/api/employees/1
+```
+
+```json
+{
+	"name": "Rob Thomas",
+	"phone_number": "085659123456",
+	"job_title": "Frontend"
+}
+```
+
+### URI params
+
+| params |    desc     | required |
+| ------ | :---------: | :------: |
+| {id}   | Employee ID |  `yes`   |
+
+## 5). Delete - Remove Data Employee
+
+```
+[ENDPOINT](DELETE) /api/employees/1
+```
+
+```url
+[EXAMPLE] https://localhost:5000/api/employees/1
+```
+
+### URI params
+
+| params |    desc     | required |
+| ------ | :---------: | :------: |
+| {id}   | Employee ID |  `yes`   |
+
+## 6). Reverse Function - Reverse Character
+
+```
+[ENDPOINT](POST) /api/reverse/
+```
+
+```url
+[EXAMPLE] https://localhost:5000/api/reverse/
+```
+
+```json
+{
+	"character": "sam"
+}
+```
+
+## 7). Fibonacci Function - Show n Fibonacci
+
+```
+[ENDPOINT](POST) /api/fibonacci/
+```
+
+```url
+[EXAMPLE] https://localhost:5000/api/fibonacci/
+```
+
+```json
+{
+	"n": 5
+}
+```
+
+## 7). combination Function - Show Result of Combination
+
+```
+[ENDPOINT](POST) /api/combination/
+```
+
+```url
+[EXAMPLE] https://localhost:5000/api/combination/
+```
+
+```json
+{
+    "n": 40,
+    "r": 20
+}
+```
